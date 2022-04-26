@@ -2,6 +2,7 @@ from CalculatorLogo import logo
 import os
 
 
+# Various Calculator functions
 def add(a, b):
     return a + b
 
@@ -26,6 +27,7 @@ def mod(a, b):
     return a % b
 
 
+# library for usable functions
 operations = {
     "+": add,
     "-": sub,
@@ -36,6 +38,8 @@ operations = {
 }
 
 
+# calculator interface uses recursion until getting to return statement
+# calculator clears screen if the user decides to do a new calculation.
 def calculator():
     os.system('cls')
     print(logo)
@@ -62,6 +66,7 @@ def calculator():
             return done
 
 
+# while loop waits for done_calculating flag to be true so it can exit program
 done_calculating = False
 while done_calculating is not True:
     done_calculating = calculator()
