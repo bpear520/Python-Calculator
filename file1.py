@@ -1,32 +1,32 @@
-# dev 1
 def add(a, b):
     return a + b
 
-# dev 2
-def multiply(a, b):
-    return a * b
-
-# dev 3
-def divide(a, b):
-    return a / b
-
-# dev 4
 def sub(a, b):
-    divide(1, 2)
     return a - b
 
+def mult(a, b):
+    return a * b
 
-def exponent(a, b):
+def div(a, b):
+    return a / b
+
+def exp(a, b):
     return a ** b
 
-
-def print_our_results(a, b, calculation_type):
-    print(calculation_type(a, b))
-
-
-def integrate(a, b):
-    return a + b
-
-
-def modulus(a, b):
+def mod(a, b):
     return a % b
+
+operations {
+    "+": add,
+    "-": sub,
+    "*": mult,
+    "/": div,
+    "^": exp,
+    "%": mod,
+}
+
+num1 = input("Whats the first number?: ")
+num2 = input("Whats the second number?: ")
+
+for functions in operations:
+    print(operations[functions])
